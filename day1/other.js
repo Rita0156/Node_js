@@ -1,5 +1,18 @@
 
 
-const sum=(a,b)=>(a+b);
+const sum=(a,b)=>console.log(a+b,"add");
 
-module.exports=sum
+const min=(a,b)=>console.log(a-b,"minus")
+
+const mul=(a,b)=>console.log(a*b,"multiply")
+
+const div=(a,b)=>console.log(a/b,"divided")
+
+const obj={
+    sum,
+    min,
+    mul,
+    div
+}
+
+module.exports=obj
