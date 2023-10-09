@@ -25,8 +25,8 @@ app.post("/:post",(req,res)=>{
     res.send(stringifyData)
 })
 
-app.delete("/",(req,res)=>{
-
+app.delete("/:id",(req,res)=>{
+     
     res.send("It is deleted !")
 })
 
