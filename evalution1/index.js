@@ -9,6 +9,8 @@ app.get("/",(req,res)=>{
 
     const data=fs.readFileSync("./post.json","utf-8")
 
+     console.log(data)
+
     res.send(data)
 
 
