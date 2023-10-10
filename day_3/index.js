@@ -2,6 +2,7 @@
 const express=require("express");
 const fs=require("fs")
 const app=express();
+const http=require("http")
 
 app.get("/",(req,res)=>{
     res.send("Welcome to home page")
@@ -9,18 +10,17 @@ app.get("/",(req,res)=>{
 
 app.get("/about",(req,res)=>{
   const  data=fs.readFileSync("./db.json","utf-8")
-    res.send(data)
+  const strData=JSON.parse(data)
+  //const posts=strData.post
+  console.log(strData.products)
+    res.send(strData.products)
 })
 app.post("/about",(req,res)=>{
     
 
    const data=fs.readFileSync("./db.json","utf-8")
 
-   const payload=req.body
-    const strigFyData=JSON.parse(payload)
-  const newData=[...data,strigFyData]
-    res.send(newData)
-    console.log("data added")
+   
 })
 app.put("/about",(req,res)=>{
     
@@ -37,7 +37,7 @@ app.delete("/about",(req,res)=>{
     res.send("Welcome to HomePage")
 })
 
-app.listen(8080,()=>{
+app.listen(8000,()=>{
     console.log("server is started");
 })
 
