@@ -4,9 +4,11 @@ const mongoosh=require("mongoose")
 const connection=mongoosh.connect("mongodb://127.0.0.1:27017/web21")
 
 const connectDb=async()=>{
-    const result=await Model.find()
+    console.log("connected to db")
+    const result=await ModelMark.find()
+    console.log(result)
       
-    const new_Mark= await Model.insertMany([{
+    const new_Mark= await ModelMark.insertMany([{
         mark1:80,
         mark2:50,
         remark:"average"
@@ -24,4 +26,4 @@ const markModel=mongoosh.Schema({
     mark2:Number,
     remark:String
 })
-const Model=mongoosh.model("mark",markModel)
+const ModelMark=mongoosh.model("mark",markModel)
