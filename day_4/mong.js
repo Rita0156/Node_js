@@ -27,3 +27,6 @@ const markModel=mongoosh.Schema({
     remark:String
 })
 const ModelMark=mongoosh.model("mark",markModel)
+
+
+export {connection,ModelMark}
