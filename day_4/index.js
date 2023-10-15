@@ -9,8 +9,26 @@ app.use(express.json())
 app.get("/",(req,res)=>{
     res.send("Welcome to Homepage")
 })
+app.get("/mark",(res,req)=>{
+    const alldata=ModelMark.marks
+    res.send(alldata)
+})
+app.post("/addmark",(res,req)=>{
+    const payload ={mark1,mark2,remark}=req.body()
+    const newData=ModelMark.payload.save();
+    res.send(newData)
 
-app.listen(7000,()=>{
+
+})
+
+app.listen(7000,async()=>{
+    try{
+      const data=   await connection()
+      console.log("connected successfully")
+    }
+    catch{
+        console.log("failed to connect")
+    }
     console.log("running server is 7000 port")
 })
 
