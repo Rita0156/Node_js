@@ -20,6 +20,10 @@ app.post("/addmark",(res,req)=>{
 
 
 })
+app.delete(`/mark:${id}`,(res,req)=>{
+    ModelMark.delete({id:id})
+    res.send("item deleted")
+})
 
 app.listen(7000,async()=>{
     try{
