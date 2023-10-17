@@ -10,8 +10,8 @@ app.get("/",(req,res)=>{
     res.send("Welcome to Homepage");
 })
 app.get("/mark",(res,req)=>{
-    const alldata=ModelMark.marks;
-    res.send(alldata);
+    const alldata=ModelMark.find(marks)
+    res.send(alldata)
 })
 app.post("/addmark",(res,req)=>{
     const payload ={mark1,mark2,remark}=req.body();
@@ -35,8 +35,5 @@ app.listen(7000,async()=>{
     }
     console.log("running server is 7000 port");
 })
-//put req is pending
-//patch req is pending
-// mvc is pending
-//work in progress
+
 
