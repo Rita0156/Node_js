@@ -7,12 +7,16 @@ const app=express()
 
 app.use(express.json())
 
+if(app.url==="/singup"){
+    
+}
+
 app.get("/",(req,res)=>{
 
 })
 app.listen(8000,async()=>{
     try{
-        await connection()
+      const conn=  await connection()
       console.log("connected successfully")
     }
     catch(err){
