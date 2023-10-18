@@ -7,12 +7,9 @@ const app=express()
 
 app.use(express.json())
 
-if(app.url==="/singup"){
-    
-}
 
 app.get("/",(req,res)=>{
-
+     res.send("Welcome to Homepage")
 })
 app.listen(8000,async()=>{
     try{
