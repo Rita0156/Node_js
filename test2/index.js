@@ -2,15 +2,17 @@
 
 
 const express=require("express")
-const {connection,schemaModel}=require("./mong.js")
+const {connection}=require("./mong.js")
 const app=express()
-
+const {NotenHander}=require("./Routs/noneFu.js")
+const {NotenHander}=require("./Routs/loginFu.js")
 app.use(express.json())
 
 
 app.get("/",(req,res)=>{
      res.send("Welcome to Homepage")
 })
+app.get("/",NotenHander)
 app.listen(8000,async()=>{
     try{
       const conn=  await connection()

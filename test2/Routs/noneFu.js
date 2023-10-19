@@ -1,16 +1,18 @@
 
 
-const {NoteModel}=require("./Pages/note.js")
+const {NoteModel}=require("../Pages/note.js")
+const mongoose=require("mongoose")
+const {Router}=require("express")
 
 
-const {Router}=require("Router")
+//const {Router}=require("Router")
 const NotenHander=Router()
- NoteHander.post("/login",(req,res)=>{
-   const {email,password}=req.body()
-   if(email&&password){
-    res.send("login successfull")
-   }
-   else{
-    res.send("email or password is incorrect")
-   }
+ NoteHander.post("/login",async(req,res)=>{
+   //const {email,password}=req.body()
+   const payload=req.body()
+   const new_payload=new NoteModel(payload)
+   await new_payload.save()
+   res.send("signup successfull")
+
 })
+module.exports={NotenHander}
