@@ -1,5 +1,5 @@
 
-const { AuthModel } = require("../Model/Auth.model");
+const { AuthModel } = require("../Model/authModel");
 
 const authorization = (userdata) => {
     

@@ -8,10 +8,12 @@ import { Signup } from './signup'
 export const Allroutes = () => {
   return (
       <Routes>
-      <Route path='/signup' element={<Signup /> } />
-      <Route path='/login' element={<Login /> } />
-      <Route path='/blog' element={<Blog /> } />
-          
+      <Route path='/signup' element={<Signup />&&<h1>signup</h1>} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/blog' element={<Blog />} />
+
+      
     </Routes>
+    
   )
 }

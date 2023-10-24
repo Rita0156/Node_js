@@ -2,7 +2,7 @@
 const { Router } = require('express');
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
-const { AuthModel } = require('../Model/Auth.model');
+const { AuthModel } = require('../Model/authModel');
 
 const authController = Router();
 

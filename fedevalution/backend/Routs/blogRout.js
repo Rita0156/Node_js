@@ -1,7 +1,7 @@
 
 const { Router } = require("express");
-const { authentication } = require("../Middleware/authentication");
-const { authorization } = require("../Middleware/authorization");
+const { authentication } = require("../Middlewere/authentic.js");
+const { authorization } = require("../Middlewere/authorize.js");
 const { SingupModel } = require("../Model/singupModel.js");
 
 const blogConroller = Router();
