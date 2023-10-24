@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 export const Blog = () => {
     const [blog, setBlog] = useState([])
-    console.log(blog,'blog')
+    
     let token = localStorage.getItem("node_token") || undefined;
     token=JSON.parse(token)
     const getData = () => {

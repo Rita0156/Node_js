@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Login = () => {
 const [data,setData]=useState({email:"",password:""})
@@ -41,6 +41,7 @@ const handleChange = (e) => {
               <input onChange={handleChange} name="password" placeholder='Enter you password' /><br />
               <button type='submit'>Login</button>
           </form>
+         <Link to="/">Homepage</Link>
     </div>
   )
 }
