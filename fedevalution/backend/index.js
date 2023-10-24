@@ -16,7 +16,7 @@ app.post("/singup",async(req,res)=>{
      res.send("Sing up successfull")
 })
 
-app.listen(7500,async(req,res)=>{
+app.listen(7500,async()=>{
  try{
      await connection
      console.log("Connected to db")
