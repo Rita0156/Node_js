@@ -1,5 +1,5 @@
 
-const mongoose=require("mongoose")
+const mongoose=require("mongoose");
 //const { SingUpModel } = require("../../../auth/Models/singup")
 
 const modSchema=mongoose.Schema({
@@ -7,11 +7,11 @@ const modSchema=mongoose.Schema({
    Category:String,
    Author:String,
    Content:String
-})
+});
 
-const SingupModel=mongoose.model("blog",modSchema)
+const SingupModel=mongoose.model("blog",modSchema);
 
-module.exports={SingupModel}
+module.exports={SingupModel};
 // Title - For Example : “My Journey at MasaI”,
 // Category - For Example : “Career”/”Finance”/”Travel”/”Sports” etc.
 // Author - For Example : “Albert”/”Manish”/”Santhi”/”Bob” etc.
