@@ -13,7 +13,7 @@ const authentication = (req, res, next) => {
 
         req.body.key=decoded.userID
         // res.json({message:"aa ja bata"})
-        next()
+        next();
       });
 }
 
