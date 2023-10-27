@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Allroutes } from './components/AllRouts';
 function App() {
@@ -10,6 +10,6 @@ function App() {
    
     </div>
   );
-}
+};
 
 export default App;
