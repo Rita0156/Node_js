@@ -7,15 +7,17 @@ const {blogConroller}=require("./Routs/blogRout.js");
 
 const app=express();
 app.use(express.json());
+app.get("/", (req, res) => {
+    
+    res.send("Homepage.........");
+});
 
 var cors = require('cors');
 app.use(cors());
 app.use("/", authController);
 app.use("/blog",blogConroller);
 
-app.get("/", (req, res) => {
-    res.send("Homepage");
-});
+
 
 
 

@@ -17,6 +17,8 @@ authController.post("/signup", async(req, res) => {
 await new_data.save();
 
     res.json({Message:"signup successfuly"});
+    res.send("sing up successfull")
+    console.log("user added")
 });
 
 
